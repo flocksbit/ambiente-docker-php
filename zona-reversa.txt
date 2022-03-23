@@ -1,0 +1,24 @@
+;
+; BIND reverse data file for local loopback interface
+;
+$TTL 604800
+@ IN SOA systemduck.net. root.systemduck.net. (
+1 ; Serial
+604800 ; Refresh
+86400 ; Retry
+2419200 ; Expire
+604800 ) ; Negative Cache TTL
+;
+
+;Name Server Information
+
+@ IN NS ns1.systemduck.net.
+ns1 IN A 195.154.119.64
+;Reverse lookup for Name Server
+
+64 IN PTR ns1.systemduck.net.
+
+;PTR Record IP address to HostName
+
+65 IN PTR www.systemduck.net.
+66 IN PTR mail.systemduck.net.
